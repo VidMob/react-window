@@ -57,6 +57,7 @@ type InnerProps = {|
 
 export type Props<T> = {|
   children: RenderComponent<T>,
+  propsForChildren: Object,
   className?: string,
   direction: Direction,
   height: number | string,
@@ -290,6 +291,7 @@ export default function createListComponent({
     render() {
       const {
         children,
+        propsForChildren,
         className,
         direction,
         height,
@@ -328,6 +330,7 @@ export default function createListComponent({
               index,
               isScrolling: useIsScrolling ? isScrolling : undefined,
               style: this._getItemStyle(index),
+              propsForChildren
             })
           );
         }

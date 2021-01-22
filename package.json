@@ -51,7 +51,7 @@
     "build:source": "rollup -c",
     "build": "del dist && mkdir dist && npm run build:flow && npm run build:source",
     "start": "rollup -c -w",
-    "prepare": "npm run run build",
+    "prepare": "npm run build",
     "website:build": "cd website && npm run build",
     "website:deploy": "cd website && npm run deploy",
     "website:run": "cd website && npm run start"
